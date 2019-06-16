@@ -5,8 +5,7 @@
     :sort-options="{
       enabled: true,
       initialSortBy: [
-        { field: 'userOneRating', type: 'desc' },
-        { field: 'userTwoRating', type: 'desc' }
+        { field: 'userOneRating', type: 'desc' }
       ]
     }"
     :groupOptions="{
@@ -24,7 +23,7 @@
     </template>
 
     <template slot="table-row" slot-scope="props">
-      <span v-if="props.column.field == 'game.name'">
+      <span v-if="props.column.field === 'game.name'">
         <a :href="gameUrl(props.row.game.id)">{{ props.row.game.name }}</a>
       </span>
       <span v-else>{{ props.formattedRow[props.column.field] }}</span>
@@ -78,7 +77,8 @@ export default {
         {
           label: `${this.user1.username}`,
           field: 'userOneRating',
-          type: 'number'
+          type: 'number',
+          sortFn: this.sortRatings
         },
         {
           label: `${this.user2.username}`,
@@ -259,6 +259,23 @@ export default {
       );
 
       return groupedMetaLibrary;
+    },
+    /**
+     * Sort ratings for the
+     *
+     * @param {Number} x row1 value for column
+     * @param {Number} y row2 value for column
+     * @param {String} col column being sorted
+     * @param {any} rowX row object for row1
+     * @param {any} rowY row object for row2
+     */
+    sortRatings(x, y, col, rowX, rowY) {
+      console.log('col:');
+      console.log(col);
+      console.log('rowX:');
+      console.log(rowX);
+      let userNum = col.field === 'userOneRating' ? 1 : 2;
+      return x < y ? -1 : x > y ? 1 : 0;
     }
   },
   computed: {

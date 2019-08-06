@@ -60,40 +60,6 @@ module Platform::GeneratedAttributeMethods
   def wikidata_id?; end
 end
 
-module Platform::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::GamePlatform::ActiveRecord_Associations_CollectionProxy) }
-  def game_platforms; end
-
-  sig { params(value: T.any(T::Array[::GamePlatform], ::GamePlatform::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_platforms=(value); end
-
-  sig { returns(::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy) }
-  def game_purchase_platforms; end
-
-  sig { params(value: T.any(T::Array[::GamePurchasePlatform], ::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_purchase_platforms=(value); end
-
-  sig { returns(::GamePurchase::ActiveRecord_Associations_CollectionProxy) }
-  def game_purchases; end
-
-  sig { params(value: T.any(T::Array[::GamePurchase], ::GamePurchase::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_purchases=(value); end
-
-  sig { returns(::Game::ActiveRecord_Associations_CollectionProxy) }
-  def games; end
-
-  sig { params(value: T.any(T::Array[::Game], ::Game::ActiveRecord_Associations_CollectionProxy)).void }
-  def games=(value); end
-
-  sig { returns(T.nilable(::PgSearch::Document)) }
-  def pg_search_document; end
-
-  sig { params(value: T.nilable(::PgSearch::Document)).void }
-  def pg_search_document=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(Platform::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -208,9 +174,78 @@ end
 class Platform < ApplicationRecord
   include Platform::GeneratedAttributeMethods
   include Platform::GeneratedAssociationMethods
-  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Platform::ModelRelationShared
   Elem = type_template(fixed: Platform)
+end
+
+module Platform::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::GamePlatform::ActiveRecord_Associations_CollectionProxy) }
+  def game_platforms; end
+
+  sig { params(value: T.any(T::Array[::GamePlatform], ::GamePlatform::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_platforms=(value); end
+
+  sig { returns(::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy) }
+  def game_purchase_platforms; end
+
+  sig { params(value: T.any(T::Array[::GamePurchasePlatform], ::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_purchase_platforms=(value); end
+
+  sig { returns(::GamePurchase::ActiveRecord_Associations_CollectionProxy) }
+  def game_purchases; end
+
+  sig { params(value: T.any(T::Array[::GamePurchase], ::GamePurchase::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_purchases=(value); end
+
+  sig { returns(::Game::ActiveRecord_Associations_CollectionProxy) }
+  def games; end
+
+  sig { params(value: T.any(T::Array[::Game], ::Game::ActiveRecord_Associations_CollectionProxy)).void }
+  def games=(value); end
+
+  sig { returns(T.nilable(::PgSearch::Document)) }
+  def pg_search_document; end
+
+  sig { params(value: T.nilable(::PgSearch::Document)).void }
+  def pg_search_document=(value); end
+
+  sig { returns(T.untyped) }
+  def game_platform_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_platform_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_purchase_platform_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_purchase_platform_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_purchase_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_purchase_ids=(ids); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_pg_search_document(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_pg_search_document(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_pg_search_document!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_pg_search_document; end
 end

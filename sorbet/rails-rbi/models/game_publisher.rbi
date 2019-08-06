@@ -51,22 +51,6 @@ module GamePublisher::GeneratedAttributeMethods
   def updated_at?; end
 end
 
-module GamePublisher::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::Company) }
-  def company; end
-
-  sig { params(value: ::Company).void }
-  def company=(value); end
-
-  sig { returns(::Game) }
-  def game; end
-
-  sig { params(value: ::Game).void }
-  def game=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(GamePublisher::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -185,4 +169,44 @@ class GamePublisher < ApplicationRecord
   extend T::Generic
   extend GamePublisher::ModelRelationShared
   Elem = type_template(fixed: GamePublisher)
+end
+
+module GamePublisher::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::Company) }
+  def company; end
+
+  sig { params(value: ::Company).void }
+  def company=(value); end
+
+  sig { returns(::Game) }
+  def game; end
+
+  sig { params(value: ::Game).void }
+  def game=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_game; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_company(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_company(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_company!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_company; end
 end

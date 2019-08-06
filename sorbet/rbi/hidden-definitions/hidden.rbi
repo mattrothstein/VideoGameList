@@ -1153,31 +1153,31 @@ class ActionView::Base
 end
 
 module ActionView::CompiledTemplates
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341328690260(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196658237020(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341395236260(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196658943980(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341397102980(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196659469140(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341407236000(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196663862520(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341407536920(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196664308780(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341412558460(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196728239560(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341415600660(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196728284280(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341416045400(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196729766900(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341419193040(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196731369200(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341419631660(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196740331860(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341420227120(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196740886100(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341420526680(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196745571800(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___2392960814421965330_70341420829720(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196746047300(local_assigns, output_buffer); end
 end
 
 class ActionView::DependencyTracker::ERBTracker
@@ -2657,18 +2657,6 @@ class ActiveStorage::Attachment
   def purge_later(); end
 end
 
-module ActiveStorage::Attachment::GeneratedAssociationMethods
-  def build_blob(*args, &block); end
-
-  def create_blob(*args, &block); end
-
-  def create_blob!(*args, &block); end
-
-  def reload_blob(); end
-
-  def reload_record(); end
-end
-
 class ActiveStorage::Attachment
   extend ::Kaminari::ConfigurationMethods::ClassMethods
   def self.page(num=T.unsafe(nil)); end
@@ -2767,18 +2755,6 @@ module ActiveStorage::Blob::Analyzable
 end
 
 module ActiveStorage::Blob::GeneratedAssociationMethods
-  def attachment_ids(); end
-
-  def attachment_ids=(ids); end
-
-  def build_preview_image_attachment(*args, &block); end
-
-  def create_preview_image_attachment(*args, &block); end
-
-  def create_preview_image_attachment!(*args, &block); end
-
-  def reload_preview_image_attachment(); end
-
   def reload_preview_image_blob(); end
 end
 
@@ -5708,32 +5684,6 @@ class Company
   def validate_associated_records_for_published_games(*args); end
 end
 
-module Company::GeneratedAssociationMethods
-  def build_pg_search_document(*args, &block); end
-
-  def create_pg_search_document(*args, &block); end
-
-  def create_pg_search_document!(*args, &block); end
-
-  def developed_game_ids(); end
-
-  def developed_game_ids=(ids); end
-
-  def game_developer_ids(); end
-
-  def game_developer_ids=(ids); end
-
-  def game_publisher_ids(); end
-
-  def game_publisher_ids=(ids); end
-
-  def published_game_ids(); end
-
-  def published_game_ids=(ids); end
-
-  def reload_pg_search_document(); end
-end
-
 class Company
   def self.after_add_for_developed_games(); end
 
@@ -6793,24 +6743,6 @@ class Engine
   def validate_associated_records_for_games(*args); end
 end
 
-module Engine::GeneratedAssociationMethods
-  def build_pg_search_document(*args, &block); end
-
-  def create_pg_search_document(*args, &block); end
-
-  def create_pg_search_document!(*args, &block); end
-
-  def game_engine_ids(); end
-
-  def game_engine_ids=(ids); end
-
-  def game_ids(); end
-
-  def game_ids=(ids); end
-
-  def reload_pg_search_document(); end
-end
-
 class Engine
   def self.after_add_for_game_engines(); end
 
@@ -7272,16 +7204,6 @@ class ExternalAccount
   def autosave_associated_records_for_user(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
-end
-
-module ExternalAccount::GeneratedAssociationMethods
-  def build_user(*args, &block); end
-
-  def create_user(*args, &block); end
-
-  def create_user!(*args, &block); end
-
-  def reload_user(); end
 end
 
 class FSEvent
@@ -7746,24 +7668,6 @@ class FavoriteGame
   def autosave_associated_records_for_user(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
-end
-
-module FavoriteGame::GeneratedAssociationMethods
-  def build_game(*args, &block); end
-
-  def build_user(*args, &block); end
-
-  def create_game(*args, &block); end
-
-  def create_game!(*args, &block); end
-
-  def create_user(*args, &block); end
-
-  def create_user!(*args, &block); end
-
-  def reload_game(); end
-
-  def reload_user(); end
 end
 
 module Fcntl
@@ -8631,83 +8535,7 @@ class Game
 end
 
 module Game::GeneratedAssociationMethods
-  def build_cover_attachment(*args, &block); end
-
-  def build_pg_search_document(*args, &block); end
-
-  def build_series(*args, &block); end
-
-  def create_cover_attachment(*args, &block); end
-
-  def create_cover_attachment!(*args, &block); end
-
-  def create_pg_search_document(*args, &block); end
-
-  def create_pg_search_document!(*args, &block); end
-
-  def create_series(*args, &block); end
-
-  def create_series!(*args, &block); end
-
-  def developer_ids(); end
-
-  def developer_ids=(ids); end
-
-  def engine_ids(); end
-
-  def engine_ids=(ids); end
-
-  def favorite_ids(); end
-
-  def favorite_ids=(ids); end
-
-  def game_developer_ids(); end
-
-  def game_developer_ids=(ids); end
-
-  def game_engine_ids(); end
-
-  def game_engine_ids=(ids); end
-
-  def game_genre_ids(); end
-
-  def game_genre_ids=(ids); end
-
-  def game_platform_ids(); end
-
-  def game_platform_ids=(ids); end
-
-  def game_publisher_ids(); end
-
-  def game_publisher_ids=(ids); end
-
-  def game_purchase_ids(); end
-
-  def game_purchase_ids=(ids); end
-
-  def genre_ids(); end
-
-  def genre_ids=(ids); end
-
-  def platform_ids(); end
-
-  def platform_ids=(ids); end
-
-  def publisher_ids(); end
-
-  def publisher_ids=(ids); end
-
-  def purchaser_ids(); end
-
-  def purchaser_ids=(ids); end
-
-  def reload_cover_attachment(); end
-
   def reload_cover_blob(); end
-
-  def reload_pg_search_document(); end
-
-  def reload_series(); end
 end
 
 class Game
@@ -9056,48 +8884,12 @@ class GameDeveloper
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
-module GameDeveloper::GeneratedAssociationMethods
-  def build_company(*args, &block); end
-
-  def build_game(*args, &block); end
-
-  def create_company(*args, &block); end
-
-  def create_company!(*args, &block); end
-
-  def create_game(*args, &block); end
-
-  def create_game!(*args, &block); end
-
-  def reload_company(); end
-
-  def reload_game(); end
-end
-
 class GameEngine
   def autosave_associated_records_for_engine(*args); end
 
   def autosave_associated_records_for_game(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
-end
-
-module GameEngine::GeneratedAssociationMethods
-  def build_engine(*args, &block); end
-
-  def build_game(*args, &block); end
-
-  def create_engine(*args, &block); end
-
-  def create_engine!(*args, &block); end
-
-  def create_game(*args, &block); end
-
-  def create_game!(*args, &block); end
-
-  def reload_engine(); end
-
-  def reload_game(); end
 end
 
 class GameGenre
@@ -9108,24 +8900,6 @@ class GameGenre
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
-module GameGenre::GeneratedAssociationMethods
-  def build_game(*args, &block); end
-
-  def build_genre(*args, &block); end
-
-  def create_game(*args, &block); end
-
-  def create_game!(*args, &block); end
-
-  def create_genre(*args, &block); end
-
-  def create_genre!(*args, &block); end
-
-  def reload_game(); end
-
-  def reload_genre(); end
-end
-
 class GamePlatform
   def autosave_associated_records_for_game(*args); end
 
@@ -9134,48 +8908,12 @@ class GamePlatform
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
-module GamePlatform::GeneratedAssociationMethods
-  def build_game(*args, &block); end
-
-  def build_platform(*args, &block); end
-
-  def create_game(*args, &block); end
-
-  def create_game!(*args, &block); end
-
-  def create_platform(*args, &block); end
-
-  def create_platform!(*args, &block); end
-
-  def reload_game(); end
-
-  def reload_platform(); end
-end
-
 class GamePublisher
   def autosave_associated_records_for_company(*args); end
 
   def autosave_associated_records_for_game(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
-end
-
-module GamePublisher::GeneratedAssociationMethods
-  def build_company(*args, &block); end
-
-  def build_game(*args, &block); end
-
-  def create_company(*args, &block); end
-
-  def create_company!(*args, &block); end
-
-  def create_game(*args, &block); end
-
-  def create_game!(*args, &block); end
-
-  def reload_company(); end
-
-  def reload_game(); end
 end
 
 class GamePurchase
@@ -9242,32 +8980,6 @@ class GamePurchase
   def validate_associated_records_for_platforms(*args); end
 end
 
-module GamePurchase::GeneratedAssociationMethods
-  def build_game(*args, &block); end
-
-  def build_user(*args, &block); end
-
-  def create_game(*args, &block); end
-
-  def create_game!(*args, &block); end
-
-  def create_user(*args, &block); end
-
-  def create_user!(*args, &block); end
-
-  def game_purchase_platform_ids(); end
-
-  def game_purchase_platform_ids=(ids); end
-
-  def platform_ids(); end
-
-  def platform_ids=(ids); end
-
-  def reload_game(); end
-
-  def reload_user(); end
-end
-
 class GamePurchase
   def self.after_add_for_game_purchase_platforms(); end
 
@@ -9324,24 +9036,6 @@ class GamePurchasePlatform
   def autosave_associated_records_for_platform(*args); end
 
   def belongs_to_counter_cache_after_update(reflection); end
-end
-
-module GamePurchasePlatform::GeneratedAssociationMethods
-  def build_game_purchase(*args, &block); end
-
-  def build_platform(*args, &block); end
-
-  def create_game_purchase(*args, &block); end
-
-  def create_game_purchase!(*args, &block); end
-
-  def create_platform(*args, &block); end
-
-  def create_platform!(*args, &block); end
-
-  def reload_game_purchase(); end
-
-  def reload_platform(); end
 end
 
 module GamesHelper
@@ -13328,24 +13022,6 @@ class Genre
   def validate_associated_records_for_game_genres(*args); end
 
   def validate_associated_records_for_games(*args); end
-end
-
-module Genre::GeneratedAssociationMethods
-  def build_pg_search_document(*args, &block); end
-
-  def create_pg_search_document(*args, &block); end
-
-  def create_pg_search_document!(*args, &block); end
-
-  def game_genre_ids(); end
-
-  def game_genre_ids=(ids); end
-
-  def game_ids(); end
-
-  def game_ids=(ids); end
-
-  def reload_pg_search_document(); end
 end
 
 class Genre
@@ -19621,32 +19297,6 @@ class Platform
   def validate_associated_records_for_game_purchases(*args); end
 
   def validate_associated_records_for_games(*args); end
-end
-
-module Platform::GeneratedAssociationMethods
-  def build_pg_search_document(*args, &block); end
-
-  def create_pg_search_document(*args, &block); end
-
-  def create_pg_search_document!(*args, &block); end
-
-  def game_ids(); end
-
-  def game_ids=(ids); end
-
-  def game_platform_ids(); end
-
-  def game_platform_ids=(ids); end
-
-  def game_purchase_ids(); end
-
-  def game_purchase_ids=(ids); end
-
-  def game_purchase_platform_ids(); end
-
-  def game_purchase_platform_ids=(ids); end
-
-  def reload_pg_search_document(); end
 end
 
 class Platform
@@ -30938,20 +30588,6 @@ class Series
   def validate_associated_records_for_games(*args); end
 end
 
-module Series::GeneratedAssociationMethods
-  def build_pg_search_document(*args, &block); end
-
-  def create_pg_search_document(*args, &block); end
-
-  def create_pg_search_document!(*args, &block); end
-
-  def game_ids(); end
-
-  def game_ids=(ids); end
-
-  def reload_pg_search_document(); end
-end
-
 class Series
   def self.after_add_for_games(); end
 
@@ -33229,35 +32865,7 @@ class User
 end
 
 module User::GeneratedAssociationMethods
-  def build_avatar_attachment(*args, &block); end
-
-  def build_external_account(*args, &block); end
-
-  def create_avatar_attachment(*args, &block); end
-
-  def create_avatar_attachment!(*args, &block); end
-
-  def create_external_account(*args, &block); end
-
-  def create_external_account!(*args, &block); end
-
-  def favorite_game_ids(); end
-
-  def favorite_game_ids=(ids); end
-
-  def game_ids(); end
-
-  def game_ids=(ids); end
-
-  def game_purchase_ids(); end
-
-  def game_purchase_ids=(ids); end
-
-  def reload_avatar_attachment(); end
-
   def reload_avatar_blob(); end
-
-  def reload_external_account(); end
 end
 
 class User

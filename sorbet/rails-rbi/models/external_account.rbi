@@ -79,16 +79,6 @@ module ExternalAccount::GeneratedAttributeMethods
   def user_id?; end
 end
 
-module ExternalAccount::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::User) }
-  def user; end
-
-  sig { params(value: ::User).void }
-  def user=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(ExternalAccount::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -217,4 +207,26 @@ module ExternalAccount::ModelRelationShared
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(ExternalAccount::ActiveRecord_Relation) }
   def except(*args, &block); end
+end
+
+module ExternalAccount::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::User) }
+  def user; end
+
+  sig { params(value: ::User).void }
+  def user=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_user(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_user(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_user!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_user; end
 end

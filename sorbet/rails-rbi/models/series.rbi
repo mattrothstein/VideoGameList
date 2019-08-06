@@ -51,22 +51,6 @@ module Series::GeneratedAttributeMethods
   def wikidata_id?; end
 end
 
-module Series::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::Game::ActiveRecord_Associations_CollectionProxy) }
-  def games; end
-
-  sig { params(value: T.any(T::Array[::Game], ::Game::ActiveRecord_Associations_CollectionProxy)).void }
-  def games=(value); end
-
-  sig { returns(T.nilable(::PgSearch::Document)) }
-  def pg_search_document; end
-
-  sig { params(value: T.nilable(::PgSearch::Document)).void }
-  def pg_search_document=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(Series::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -181,9 +165,42 @@ end
 class Series < ApplicationRecord
   include Series::GeneratedAttributeMethods
   include Series::GeneratedAssociationMethods
-  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Series::ModelRelationShared
   Elem = type_template(fixed: Series)
+end
+
+module Series::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::Game::ActiveRecord_Associations_CollectionProxy) }
+  def games; end
+
+  sig { params(value: T.any(T::Array[::Game], ::Game::ActiveRecord_Associations_CollectionProxy)).void }
+  def games=(value); end
+
+  sig { returns(T.nilable(::PgSearch::Document)) }
+  def pg_search_document; end
+
+  sig { params(value: T.nilable(::PgSearch::Document)).void }
+  def pg_search_document=(value); end
+
+  sig { returns(T.untyped) }
+  def game_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_ids=(ids); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_pg_search_document(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_pg_search_document(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_pg_search_document!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_pg_search_document; end
 end

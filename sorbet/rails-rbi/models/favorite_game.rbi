@@ -51,22 +51,6 @@ module FavoriteGame::GeneratedAttributeMethods
   def user_id?; end
 end
 
-module FavoriteGame::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(T.nilable(::Game)) }
-  def game; end
-
-  sig { params(value: T.nilable(::Game)).void }
-  def game=(value); end
-
-  sig { returns(T.nilable(::User)) }
-  def user; end
-
-  sig { params(value: T.nilable(::User)).void }
-  def user=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(FavoriteGame::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -185,4 +169,44 @@ class FavoriteGame < ApplicationRecord
   extend T::Generic
   extend FavoriteGame::ModelRelationShared
   Elem = type_template(fixed: FavoriteGame)
+end
+
+module FavoriteGame::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(T.nilable(::Game)) }
+  def game; end
+
+  sig { params(value: T.nilable(::Game)).void }
+  def game=(value); end
+
+  sig { returns(T.nilable(::User)) }
+  def user; end
+
+  sig { params(value: T.nilable(::User)).void }
+  def user=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_game; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_user(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_user(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_user!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_user; end
 end

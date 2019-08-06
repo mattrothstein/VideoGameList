@@ -96,112 +96,6 @@ module Game::GeneratedAttributeMethods
   def wikidata_id?; end
 end
 
-module Game::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(T.nilable(::ActiveStorage::Attachment)) }
-  def cover_attachment; end
-
-  sig { params(value: T.nilable(::ActiveStorage::Attachment)).void }
-  def cover_attachment=(value); end
-
-  sig { returns(T.nilable(::ActiveStorage::Blob)) }
-  def cover_blob; end
-
-  sig { params(value: T.nilable(::ActiveStorage::Blob)).void }
-  def cover_blob=(value); end
-
-  sig { returns(::Company::ActiveRecord_Associations_CollectionProxy) }
-  def developers; end
-
-  sig { params(value: T.any(T::Array[::Company], ::Company::ActiveRecord_Associations_CollectionProxy)).void }
-  def developers=(value); end
-
-  sig { returns(::Engine::ActiveRecord_Associations_CollectionProxy) }
-  def engines; end
-
-  sig { params(value: T.any(T::Array[::Engine], ::Engine::ActiveRecord_Associations_CollectionProxy)).void }
-  def engines=(value); end
-
-  sig { returns(::FavoriteGame::ActiveRecord_Associations_CollectionProxy) }
-  def favorites; end
-
-  sig { params(value: T.any(T::Array[::FavoriteGame], ::FavoriteGame::ActiveRecord_Associations_CollectionProxy)).void }
-  def favorites=(value); end
-
-  sig { returns(::GameDeveloper::ActiveRecord_Associations_CollectionProxy) }
-  def game_developers; end
-
-  sig { params(value: T.any(T::Array[::GameDeveloper], ::GameDeveloper::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_developers=(value); end
-
-  sig { returns(::GameEngine::ActiveRecord_Associations_CollectionProxy) }
-  def game_engines; end
-
-  sig { params(value: T.any(T::Array[::GameEngine], ::GameEngine::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_engines=(value); end
-
-  sig { returns(::GameGenre::ActiveRecord_Associations_CollectionProxy) }
-  def game_genres; end
-
-  sig { params(value: T.any(T::Array[::GameGenre], ::GameGenre::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_genres=(value); end
-
-  sig { returns(::GamePlatform::ActiveRecord_Associations_CollectionProxy) }
-  def game_platforms; end
-
-  sig { params(value: T.any(T::Array[::GamePlatform], ::GamePlatform::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_platforms=(value); end
-
-  sig { returns(::GamePublisher::ActiveRecord_Associations_CollectionProxy) }
-  def game_publishers; end
-
-  sig { params(value: T.any(T::Array[::GamePublisher], ::GamePublisher::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_publishers=(value); end
-
-  sig { returns(::GamePurchase::ActiveRecord_Associations_CollectionProxy) }
-  def game_purchases; end
-
-  sig { params(value: T.any(T::Array[::GamePurchase], ::GamePurchase::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_purchases=(value); end
-
-  sig { returns(::Genre::ActiveRecord_Associations_CollectionProxy) }
-  def genres; end
-
-  sig { params(value: T.any(T::Array[::Genre], ::Genre::ActiveRecord_Associations_CollectionProxy)).void }
-  def genres=(value); end
-
-  sig { returns(T.nilable(::PgSearch::Document)) }
-  def pg_search_document; end
-
-  sig { params(value: T.nilable(::PgSearch::Document)).void }
-  def pg_search_document=(value); end
-
-  sig { returns(::Platform::ActiveRecord_Associations_CollectionProxy) }
-  def platforms; end
-
-  sig { params(value: T.any(T::Array[::Platform], ::Platform::ActiveRecord_Associations_CollectionProxy)).void }
-  def platforms=(value); end
-
-  sig { returns(::Company::ActiveRecord_Associations_CollectionProxy) }
-  def publishers; end
-
-  sig { params(value: T.any(T::Array[::Company], ::Company::ActiveRecord_Associations_CollectionProxy)).void }
-  def publishers=(value); end
-
-  sig { returns(::User::ActiveRecord_Associations_CollectionProxy) }
-  def purchasers; end
-
-  sig { params(value: T.any(T::Array[::User], ::User::ActiveRecord_Associations_CollectionProxy)).void }
-  def purchasers=(value); end
-
-  sig { returns(T.nilable(::Series)) }
-  def series; end
-
-  sig { params(value: T.nilable(::Series)).void }
-  def series=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(Game::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -340,9 +234,234 @@ end
 class Game < ApplicationRecord
   include Game::GeneratedAttributeMethods
   include Game::GeneratedAssociationMethods
-  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Game::ModelRelationShared
   Elem = type_template(fixed: Game)
+end
+
+module Game::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(T.nilable(::ActiveStorage::Attachment)) }
+  def cover_attachment; end
+
+  sig { params(value: T.nilable(::ActiveStorage::Attachment)).void }
+  def cover_attachment=(value); end
+
+  sig { returns(T.nilable(::ActiveStorage::Blob)) }
+  def cover_blob; end
+
+  sig { params(value: T.nilable(::ActiveStorage::Blob)).void }
+  def cover_blob=(value); end
+
+  sig { returns(::Company::ActiveRecord_Associations_CollectionProxy) }
+  def developers; end
+
+  sig { params(value: T.any(T::Array[::Company], ::Company::ActiveRecord_Associations_CollectionProxy)).void }
+  def developers=(value); end
+
+  sig { returns(::Engine::ActiveRecord_Associations_CollectionProxy) }
+  def engines; end
+
+  sig { params(value: T.any(T::Array[::Engine], ::Engine::ActiveRecord_Associations_CollectionProxy)).void }
+  def engines=(value); end
+
+  sig { returns(::FavoriteGame::ActiveRecord_Associations_CollectionProxy) }
+  def favorites; end
+
+  sig { params(value: T.any(T::Array[::FavoriteGame], ::FavoriteGame::ActiveRecord_Associations_CollectionProxy)).void }
+  def favorites=(value); end
+
+  sig { returns(::GameDeveloper::ActiveRecord_Associations_CollectionProxy) }
+  def game_developers; end
+
+  sig { params(value: T.any(T::Array[::GameDeveloper], ::GameDeveloper::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_developers=(value); end
+
+  sig { returns(::GameEngine::ActiveRecord_Associations_CollectionProxy) }
+  def game_engines; end
+
+  sig { params(value: T.any(T::Array[::GameEngine], ::GameEngine::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_engines=(value); end
+
+  sig { returns(::GameGenre::ActiveRecord_Associations_CollectionProxy) }
+  def game_genres; end
+
+  sig { params(value: T.any(T::Array[::GameGenre], ::GameGenre::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_genres=(value); end
+
+  sig { returns(::GamePlatform::ActiveRecord_Associations_CollectionProxy) }
+  def game_platforms; end
+
+  sig { params(value: T.any(T::Array[::GamePlatform], ::GamePlatform::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_platforms=(value); end
+
+  sig { returns(::GamePublisher::ActiveRecord_Associations_CollectionProxy) }
+  def game_publishers; end
+
+  sig { params(value: T.any(T::Array[::GamePublisher], ::GamePublisher::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_publishers=(value); end
+
+  sig { returns(::GamePurchase::ActiveRecord_Associations_CollectionProxy) }
+  def game_purchases; end
+
+  sig { params(value: T.any(T::Array[::GamePurchase], ::GamePurchase::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_purchases=(value); end
+
+  sig { returns(::Genre::ActiveRecord_Associations_CollectionProxy) }
+  def genres; end
+
+  sig { params(value: T.any(T::Array[::Genre], ::Genre::ActiveRecord_Associations_CollectionProxy)).void }
+  def genres=(value); end
+
+  sig { returns(T.nilable(::PgSearch::Document)) }
+  def pg_search_document; end
+
+  sig { params(value: T.nilable(::PgSearch::Document)).void }
+  def pg_search_document=(value); end
+
+  sig { returns(::Platform::ActiveRecord_Associations_CollectionProxy) }
+  def platforms; end
+
+  sig { params(value: T.any(T::Array[::Platform], ::Platform::ActiveRecord_Associations_CollectionProxy)).void }
+  def platforms=(value); end
+
+  sig { returns(::Company::ActiveRecord_Associations_CollectionProxy) }
+  def publishers; end
+
+  sig { params(value: T.any(T::Array[::Company], ::Company::ActiveRecord_Associations_CollectionProxy)).void }
+  def publishers=(value); end
+
+  sig { returns(::User::ActiveRecord_Associations_CollectionProxy) }
+  def purchasers; end
+
+  sig { params(value: T.any(T::Array[::User], ::User::ActiveRecord_Associations_CollectionProxy)).void }
+  def purchasers=(value); end
+
+  sig { returns(T.nilable(::Series)) }
+  def series; end
+
+  sig { params(value: T.nilable(::Series)).void }
+  def series=(value); end
+
+  sig { returns(T.untyped) }
+  def game_purchase_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_purchase_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def purchaser_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def purchaser_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_developer_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_developer_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def developer_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def developer_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_publisher_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_publisher_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def publisher_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def publisher_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_platform_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_platform_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def platform_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def platform_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_genre_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_genre_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def genre_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def genre_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_engine_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_engine_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def engine_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def engine_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def favorite_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def favorite_ids=(ids); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_series(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_series(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_series!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_series; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_cover_attachment(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_cover_attachment(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_cover_attachment!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_cover_attachment; end
+
+  sig { returns(T.untyped) }
+  def cover_blob_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def cover_blob_ids=(ids); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_pg_search_document(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_pg_search_document(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_pg_search_document!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_pg_search_document; end
 end

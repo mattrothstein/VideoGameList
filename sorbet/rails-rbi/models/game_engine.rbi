@@ -51,22 +51,6 @@ module GameEngine::GeneratedAttributeMethods
   def updated_at?; end
 end
 
-module GameEngine::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::Engine) }
-  def engine; end
-
-  sig { params(value: ::Engine).void }
-  def engine=(value); end
-
-  sig { returns(::Game) }
-  def game; end
-
-  sig { params(value: ::Game).void }
-  def game=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(GameEngine::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -185,4 +169,44 @@ class GameEngine < ApplicationRecord
   extend T::Generic
   extend GameEngine::ModelRelationShared
   Elem = type_template(fixed: GameEngine)
+end
+
+module GameEngine::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::Engine) }
+  def engine; end
+
+  sig { params(value: ::Engine).void }
+  def engine=(value); end
+
+  sig { returns(::Game) }
+  def game; end
+
+  sig { params(value: ::Game).void }
+  def game=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_game; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_engine(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_engine(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_engine!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_engine; end
 end

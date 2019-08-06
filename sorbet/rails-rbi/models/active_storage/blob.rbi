@@ -78,28 +78,6 @@ module ActiveStorage::Blob::GeneratedAttributeMethods
   def metadata?; end
 end
 
-module ActiveStorage::Blob::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::ActiveStorage::Attachment::ActiveRecord_Associations_CollectionProxy) }
-  def attachments; end
-
-  sig { params(value: T.any(T::Array[::ActiveStorage::Attachment], ::ActiveStorage::Attachment::ActiveRecord_Associations_CollectionProxy)).void }
-  def attachments=(value); end
-
-  sig { returns(T.nilable(::ActiveStorage::Attachment)) }
-  def preview_image_attachment; end
-
-  sig { params(value: T.nilable(::ActiveStorage::Attachment)).void }
-  def preview_image_attachment=(value); end
-
-  sig { returns(T.nilable(::ActiveStorage::Blob)) }
-  def preview_image_blob; end
-
-  sig { params(value: T.nilable(::ActiveStorage::Blob)).void }
-  def preview_image_blob=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(ActiveStorage::Blob::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -224,4 +202,50 @@ class ActiveStorage::Blob < ActiveRecord::Base
   extend T::Generic
   extend ActiveStorage::Blob::ModelRelationShared
   Elem = type_template(fixed: ActiveStorage::Blob)
+end
+
+module ActiveStorage::Blob::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::ActiveStorage::Attachment::ActiveRecord_Associations_CollectionProxy) }
+  def attachments; end
+
+  sig { params(value: T.any(T::Array[::ActiveStorage::Attachment], ::ActiveStorage::Attachment::ActiveRecord_Associations_CollectionProxy)).void }
+  def attachments=(value); end
+
+  sig { returns(T.nilable(::ActiveStorage::Attachment)) }
+  def preview_image_attachment; end
+
+  sig { params(value: T.nilable(::ActiveStorage::Attachment)).void }
+  def preview_image_attachment=(value); end
+
+  sig { returns(T.nilable(::ActiveStorage::Blob)) }
+  def preview_image_blob; end
+
+  sig { params(value: T.nilable(::ActiveStorage::Blob)).void }
+  def preview_image_blob=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_preview_image_attachment(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_preview_image_attachment(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_preview_image_attachment!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_preview_image_attachment; end
+
+  sig { returns(T.untyped) }
+  def preview_image_blob_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def preview_image_blob_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def attachment_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def attachment_ids=(ids); end
 end

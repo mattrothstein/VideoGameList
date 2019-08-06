@@ -51,22 +51,6 @@ module GamePurchasePlatform::GeneratedAttributeMethods
   def updated_at?; end
 end
 
-module GamePurchasePlatform::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::GamePurchase) }
-  def game_purchase; end
-
-  sig { params(value: ::GamePurchase).void }
-  def game_purchase=(value); end
-
-  sig { returns(::Platform) }
-  def platform; end
-
-  sig { params(value: ::Platform).void }
-  def platform=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(GamePurchasePlatform::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -185,4 +169,44 @@ class GamePurchasePlatform < ApplicationRecord
   extend T::Generic
   extend GamePurchasePlatform::ModelRelationShared
   Elem = type_template(fixed: GamePurchasePlatform)
+end
+
+module GamePurchasePlatform::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::GamePurchase) }
+  def game_purchase; end
+
+  sig { params(value: ::GamePurchase).void }
+  def game_purchase=(value); end
+
+  sig { returns(::Platform) }
+  def platform; end
+
+  sig { params(value: ::Platform).void }
+  def platform=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_game_purchase(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game_purchase(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game_purchase!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_game_purchase; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_platform(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_platform(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_platform!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_platform; end
 end

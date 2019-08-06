@@ -217,46 +217,6 @@ module User::GeneratedAttributeMethods
   def username?; end
 end
 
-module User::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(T.nilable(::ActiveStorage::Attachment)) }
-  def avatar_attachment; end
-
-  sig { params(value: T.nilable(::ActiveStorage::Attachment)).void }
-  def avatar_attachment=(value); end
-
-  sig { returns(T.nilable(::ActiveStorage::Blob)) }
-  def avatar_blob; end
-
-  sig { params(value: T.nilable(::ActiveStorage::Blob)).void }
-  def avatar_blob=(value); end
-
-  sig { returns(T.nilable(::ExternalAccount)) }
-  def external_account; end
-
-  sig { params(value: T.nilable(::ExternalAccount)).void }
-  def external_account=(value); end
-
-  sig { returns(::FavoriteGame::ActiveRecord_Associations_CollectionProxy) }
-  def favorite_games; end
-
-  sig { params(value: T.any(T::Array[::FavoriteGame], ::FavoriteGame::ActiveRecord_Associations_CollectionProxy)).void }
-  def favorite_games=(value); end
-
-  sig { returns(::GamePurchase::ActiveRecord_Associations_CollectionProxy) }
-  def game_purchases; end
-
-  sig { params(value: T.any(T::Array[::GamePurchase], ::GamePurchase::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_purchases=(value); end
-
-  sig { returns(::Game::ActiveRecord_Associations_CollectionProxy) }
-  def games; end
-
-  sig { params(value: T.any(T::Array[::Game], ::Game::ActiveRecord_Associations_CollectionProxy)).void }
-  def games=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(User::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -400,4 +360,92 @@ module User::ModelRelationShared
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(User::ActiveRecord_Relation) }
   def except(*args, &block); end
+end
+
+module User::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(T.nilable(::ActiveStorage::Attachment)) }
+  def avatar_attachment; end
+
+  sig { params(value: T.nilable(::ActiveStorage::Attachment)).void }
+  def avatar_attachment=(value); end
+
+  sig { returns(T.nilable(::ActiveStorage::Blob)) }
+  def avatar_blob; end
+
+  sig { params(value: T.nilable(::ActiveStorage::Blob)).void }
+  def avatar_blob=(value); end
+
+  sig { returns(T.nilable(::ExternalAccount)) }
+  def external_account; end
+
+  sig { params(value: T.nilable(::ExternalAccount)).void }
+  def external_account=(value); end
+
+  sig { returns(::FavoriteGame::ActiveRecord_Associations_CollectionProxy) }
+  def favorite_games; end
+
+  sig { params(value: T.any(T::Array[::FavoriteGame], ::FavoriteGame::ActiveRecord_Associations_CollectionProxy)).void }
+  def favorite_games=(value); end
+
+  sig { returns(::GamePurchase::ActiveRecord_Associations_CollectionProxy) }
+  def game_purchases; end
+
+  sig { params(value: T.any(T::Array[::GamePurchase], ::GamePurchase::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_purchases=(value); end
+
+  sig { returns(::Game::ActiveRecord_Associations_CollectionProxy) }
+  def games; end
+
+  sig { params(value: T.any(T::Array[::Game], ::Game::ActiveRecord_Associations_CollectionProxy)).void }
+  def games=(value); end
+
+  sig { returns(T.untyped) }
+  def game_purchase_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_purchase_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def game_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def favorite_game_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def favorite_game_ids=(ids); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_external_account(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_external_account(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_external_account!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_external_account; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_avatar_attachment(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_avatar_attachment(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_avatar_attachment!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_avatar_attachment; end
+
+  sig { returns(T.untyped) }
+  def avatar_blob_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def avatar_blob_ids=(ids); end
 end

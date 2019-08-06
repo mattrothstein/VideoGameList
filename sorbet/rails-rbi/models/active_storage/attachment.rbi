@@ -60,22 +60,6 @@ module ActiveStorage::Attachment::GeneratedAttributeMethods
   def record_type?; end
 end
 
-module ActiveStorage::Attachment::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::ActiveStorage::Blob) }
-  def blob; end
-
-  sig { params(value: ::ActiveStorage::Blob).void }
-  def blob=(value); end
-
-  sig { returns(T.untyped) }
-  def record; end
-
-  sig { params(value: T.untyped).void }
-  def record=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(ActiveStorage::Attachment::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -194,4 +178,44 @@ class ActiveStorage::Attachment < ActiveRecord::Base
   extend T::Generic
   extend ActiveStorage::Attachment::ModelRelationShared
   Elem = type_template(fixed: ActiveStorage::Attachment)
+end
+
+module ActiveStorage::Attachment::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::ActiveStorage::Blob) }
+  def blob; end
+
+  sig { params(value: ::ActiveStorage::Blob).void }
+  def blob=(value); end
+
+  sig { returns(T.untyped) }
+  def record; end
+
+  sig { params(value: T.untyped).void }
+  def record=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_record(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_record(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_record!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_record; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_blob(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_blob(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_blob!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_blob; end
 end

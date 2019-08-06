@@ -151,34 +151,6 @@ module GamePurchase::GeneratedAttributeMethods
   def user_id?; end
 end
 
-module GamePurchase::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::Game) }
-  def game; end
-
-  sig { params(value: ::Game).void }
-  def game=(value); end
-
-  sig { returns(::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy) }
-  def game_purchase_platforms; end
-
-  sig { params(value: T.any(T::Array[::GamePurchasePlatform], ::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy)).void }
-  def game_purchase_platforms=(value); end
-
-  sig { returns(::Platform::ActiveRecord_Associations_CollectionProxy) }
-  def platforms; end
-
-  sig { params(value: T.any(T::Array[::Platform], ::Platform::ActiveRecord_Associations_CollectionProxy)).void }
-  def platforms=(value); end
-
-  sig { returns(::User) }
-  def user; end
-
-  sig { params(value: ::User).void }
-  def user=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(GamePurchase::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -343,4 +315,68 @@ module GamePurchase::ModelRelationShared
 
   sig { params(args: T.untyped, block: T.nilable(T.proc.void)).returns(GamePurchase::ActiveRecord_Relation) }
   def except(*args, &block); end
+end
+
+module GamePurchase::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::Game) }
+  def game; end
+
+  sig { params(value: ::Game).void }
+  def game=(value); end
+
+  sig { returns(::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy) }
+  def game_purchase_platforms; end
+
+  sig { params(value: T.any(T::Array[::GamePurchasePlatform], ::GamePurchasePlatform::ActiveRecord_Associations_CollectionProxy)).void }
+  def game_purchase_platforms=(value); end
+
+  sig { returns(::Platform::ActiveRecord_Associations_CollectionProxy) }
+  def platforms; end
+
+  sig { params(value: T.any(T::Array[::Platform], ::Platform::ActiveRecord_Associations_CollectionProxy)).void }
+  def platforms=(value); end
+
+  sig { returns(::User) }
+  def user; end
+
+  sig { params(value: ::User).void }
+  def user=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_game; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_user(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_user(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_user!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_user; end
+
+  sig { returns(T.untyped) }
+  def game_purchase_platform_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def game_purchase_platform_ids=(ids); end
+
+  sig { returns(T.untyped) }
+  def platform_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def platform_ids=(ids); end
 end

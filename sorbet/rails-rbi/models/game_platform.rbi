@@ -51,22 +51,6 @@ module GamePlatform::GeneratedAttributeMethods
   def updated_at?; end
 end
 
-module GamePlatform::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::Game) }
-  def game; end
-
-  sig { params(value: ::Game).void }
-  def game=(value); end
-
-  sig { returns(::Platform) }
-  def platform; end
-
-  sig { params(value: ::Platform).void }
-  def platform=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(GamePlatform::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -185,4 +169,44 @@ class GamePlatform < ApplicationRecord
   extend T::Generic
   extend GamePlatform::ModelRelationShared
   Elem = type_template(fixed: GamePlatform)
+end
+
+module GamePlatform::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::Game) }
+  def game; end
+
+  sig { params(value: ::Game).void }
+  def game=(value); end
+
+  sig { returns(::Platform) }
+  def platform; end
+
+  sig { params(value: ::Platform).void }
+  def platform=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_game; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_platform(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_platform(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_platform!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_platform; end
 end

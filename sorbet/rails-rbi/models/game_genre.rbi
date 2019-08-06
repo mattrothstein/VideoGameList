@@ -51,22 +51,6 @@ module GameGenre::GeneratedAttributeMethods
   def updated_at?; end
 end
 
-module GameGenre::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(::Game) }
-  def game; end
-
-  sig { params(value: ::Game).void }
-  def game=(value); end
-
-  sig { returns(::Genre) }
-  def genre; end
-
-  sig { params(value: ::Genre).void }
-  def genre=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(GameGenre::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -185,4 +169,44 @@ class GameGenre < ApplicationRecord
   extend T::Generic
   extend GameGenre::ModelRelationShared
   Elem = type_template(fixed: GameGenre)
+end
+
+module GameGenre::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(::Game) }
+  def game; end
+
+  sig { params(value: ::Game).void }
+  def game=(value); end
+
+  sig { returns(::Genre) }
+  def genre; end
+
+  sig { params(value: ::Genre).void }
+  def genre=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_game!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_game; end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_genre(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_genre(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_genre!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_genre; end
 end

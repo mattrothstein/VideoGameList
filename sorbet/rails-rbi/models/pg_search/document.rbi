@@ -60,16 +60,6 @@ module PgSearch::Document::GeneratedAttributeMethods
   def updated_at?; end
 end
 
-module PgSearch::Document::GeneratedAssociationMethods
-  extend T::Sig
-
-  sig { returns(T.nilable(T.untyped)) }
-  def searchable; end
-
-  sig { params(value: T.nilable(T.untyped)).void }
-  def searchable=(value); end
-end
-
 module Kaminari::ActiveRecordModelExtension
   sig { params(num: Integer).returns(PgSearch::Document::ActiveRecord_Relation) }
   def page(num = nil); end
@@ -184,9 +174,30 @@ end
 class PgSearch::Document < ActiveRecord::Base
   include PgSearch::Document::GeneratedAttributeMethods
   include PgSearch::Document::GeneratedAssociationMethods
-  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend PgSearch::Document::ModelRelationShared
   Elem = type_template(fixed: PgSearch::Document)
+end
+
+module PgSearch::Document::GeneratedAssociationMethods
+  extend T::Sig
+
+  sig { returns(T.nilable(T.untyped)) }
+  def searchable; end
+
+  sig { params(value: T.nilable(T.untyped)).void }
+  def searchable=(value); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def build_searchable(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_searchable(*args, &block); end
+
+  sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
+  def create_searchable!(*args, &block); end
+
+  sig { returns(T.untyped) }
+  def reload_searchable; end
 end

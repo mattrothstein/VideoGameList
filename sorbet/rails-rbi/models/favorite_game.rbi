@@ -169,6 +169,54 @@ class FavoriteGame < ApplicationRecord
   extend T::Generic
   extend FavoriteGame::ModelRelationShared
   Elem = type_template(fixed: FavoriteGame)
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_user; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_user=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_user; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_user=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_user; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_user=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_user; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_user=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_user(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_user(*args); end
 end
 
 module FavoriteGame::GeneratedAssociationMethods
@@ -209,4 +257,10 @@ module FavoriteGame::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_user; end
+
+  sig { returns(T.untyped) }
+  def user_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def user_ids=(ids); end
 end

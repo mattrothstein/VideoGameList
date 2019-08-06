@@ -169,6 +169,54 @@ class GamePlatform < ApplicationRecord
   extend T::Generic
   extend GamePlatform::ModelRelationShared
   Elem = type_template(fixed: GamePlatform)
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_platform; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_platform?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_platform=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_platform; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_platform?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_platform=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_platform; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_platform?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_platform=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_platform; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_platform?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_platform=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_platform(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_platform(*args); end
 end
 
 module GamePlatform::GeneratedAssociationMethods
@@ -209,4 +257,10 @@ module GamePlatform::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_platform; end
+
+  sig { returns(T.untyped) }
+  def platform_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def platform_ids=(ids); end
 end

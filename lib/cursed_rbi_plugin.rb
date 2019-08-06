@@ -72,6 +72,12 @@ class CursedRbiPlugin < SorbetRails::ModelPlugins::Base
         model_klass = root.create_class(model_class_name)
         create_after_before_add_remove_methods(assoc_name, model_klass)
       end
+
+      all_the_reflections = has_many_through_reflections.concat(singular_associations)
+      if all_the_reflections.include?(reflection.class)
+        model_klass = root.create_class(model_class_name)
+        autosave_and_validate_associated_records_methods(assoc_name, model_klass)
+      end
     end
   end
 
@@ -106,5 +112,25 @@ class CursedRbiPlugin < SorbetRails::ModelPlugins::Base
         return_type: 'T.untyped'
       )
     end
+  end
+
+  def autosave_and_validate_associated_records_methods(assoc_name, model_klass)
+    # def autosave_associated_records_for_developers(*args); end
+    model_klass.create_method(
+      "autosave_associated_records_for_#{assoc_name}",
+      parameters: [
+        Parlour::RbiGenerator::Parameter.new('*args', type: 'T.untyped')
+      ],
+      return_type: 'T.untyped'
+    )
+    
+    # def validate_associated_records_for_developers(*args); end
+    model_klass.create_method(
+      "validate_associated_records_for_#{assoc_name}",
+      parameters: [
+        Parlour::RbiGenerator::Parameter.new('*args', type: 'T.untyped')
+      ],
+      return_type: 'T.untyped'
+    )
   end
 end

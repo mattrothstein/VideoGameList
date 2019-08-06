@@ -203,6 +203,54 @@ class GamePurchase < ApplicationRecord
   sig { returns(GamePurchase::ActiveRecord_Relation) }
   def self.paused; end
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_user; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_user=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_user; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_user=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_user; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_user=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_user; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_user?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_user=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_user(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_user(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_game_purchase_platforms; end
 
@@ -239,6 +287,12 @@ class GamePurchase < ApplicationRecord
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_game_purchase_platforms=(val); end
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game_purchase_platforms(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game_purchase_platforms(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_platforms; end
 
@@ -274,6 +328,12 @@ class GamePurchase < ApplicationRecord
 
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_platforms=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_platforms(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_platforms(*args); end
 end
 
 module GamePurchase::ModelRelationShared
@@ -439,6 +499,12 @@ module GamePurchase::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_user; end
+
+  sig { returns(T.untyped) }
+  def user_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def user_ids=(ids); end
 
   sig { returns(T.untyped) }
   def game_purchase_platform_ids; end

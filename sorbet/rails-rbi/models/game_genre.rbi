@@ -169,6 +169,54 @@ class GameGenre < ApplicationRecord
   extend T::Generic
   extend GameGenre::ModelRelationShared
   Elem = type_template(fixed: GameGenre)
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_genre; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_genre?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_genre=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_genre; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_genre?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_genre=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_genre; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_genre?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_genre=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_genre; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_genre?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_genre=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_genre(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_genre(*args); end
 end
 
 module GameGenre::GeneratedAssociationMethods
@@ -209,4 +257,10 @@ module GameGenre::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_genre; end
+
+  sig { returns(T.untyped) }
+  def genre_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def genre_ids=(ids); end
 end

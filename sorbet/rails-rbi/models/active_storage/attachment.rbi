@@ -178,6 +178,54 @@ class ActiveStorage::Attachment < ActiveRecord::Base
   extend T::Generic
   extend ActiveStorage::Attachment::ModelRelationShared
   Elem = type_template(fixed: ActiveStorage::Attachment)
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_record(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_record(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_blob; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_blob; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_blob; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_blob; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_blob=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_blob(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_blob(*args); end
 end
 
 module ActiveStorage::Attachment::GeneratedAssociationMethods
@@ -218,4 +266,10 @@ module ActiveStorage::Attachment::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_blob; end
+
+  sig { returns(T.untyped) }
+  def blob_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def blob_ids=(ids); end
 end

@@ -169,6 +169,54 @@ class GameEngine < ApplicationRecord
   extend T::Generic
   extend GameEngine::ModelRelationShared
   Elem = type_template(fixed: GameEngine)
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_engine; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_engine?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_engine=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_engine; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_engine?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_engine=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_engine; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_engine?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_engine=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_engine; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_engine?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_engine=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_engine(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_engine(*args); end
 end
 
 module GameEngine::GeneratedAssociationMethods
@@ -209,4 +257,10 @@ module GameEngine::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_engine; end
+
+  sig { returns(T.untyped) }
+  def engine_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def engine_ids=(ids); end
 end

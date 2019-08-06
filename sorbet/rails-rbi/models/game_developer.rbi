@@ -169,6 +169,54 @@ class GameDeveloper < ApplicationRecord
   extend T::Generic
   extend GameDeveloper::ModelRelationShared
   Elem = type_template(fixed: GameDeveloper)
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_company; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_company?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_company=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_company; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_company?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_company=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_company; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_company?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_company=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_company; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_company?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_company=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_company(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_company(*args); end
 end
 
 module GameDeveloper::GeneratedAssociationMethods
@@ -209,4 +257,10 @@ module GameDeveloper::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_company; end
+
+  sig { returns(T.untyped) }
+  def company_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def company_ids=(ids); end
 end

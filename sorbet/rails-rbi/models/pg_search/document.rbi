@@ -179,6 +179,12 @@ class PgSearch::Document < ActiveRecord::Base
   extend T::Generic
   extend PgSearch::Document::ModelRelationShared
   Elem = type_template(fixed: PgSearch::Document)
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_searchable(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_searchable(*args); end
 end
 
 module PgSearch::Document::GeneratedAssociationMethods

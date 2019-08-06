@@ -1153,31 +1153,19 @@ class ActionView::Base
 end
 
 module ActionView::CompiledTemplates
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360236252040(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__2478200073692962389_70308280671940(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360236424060(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__2478200073692962389_70308281746200(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360237033560(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__2478200073692962389_70308316234840(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360237475060(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__2478200073692962389_70308321495960(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360256623240(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__2478200073692962389_70308322264580(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360258244780(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__2478200073692962389_70308322413340(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360265448120(local_assigns, output_buffer); end
-
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360266871880(local_assigns, output_buffer); end
-
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360267677620(local_assigns, output_buffer); end
-
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360267721020(local_assigns, output_buffer); end
-
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360268364680(local_assigns, output_buffer); end
-
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360276996740(local_assigns, output_buffer); end
-
-  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360277730820(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__2478200073692962389_70308325382560(local_assigns, output_buffer); end
 end
 
 class ActionView::DependencyTracker::ERBTracker
@@ -2646,10 +2634,6 @@ end
 class ActiveStorage::Attachment
   include ::Kaminari::ActiveRecordModelExtension
   include ::Kaminari::ConfigurationMethods
-  def autosave_associated_records_for_blob(*args); end
-
-  def autosave_associated_records_for_record(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 
   def purge(); end
@@ -2675,12 +2659,6 @@ class ActiveStorage::Blob
   include ::ActiveStorage::Blob::Identifiable
   include ::ActiveStorage::Blob::Representable
   def audio?(); end
-
-  def autosave_associated_records_for_attachments(*args); end
-
-  def autosave_associated_records_for_preview_image_attachment(); end
-
-  def autosave_associated_records_for_preview_image_blob(); end
 
   def download(&block); end
 
@@ -2713,8 +2691,6 @@ class ActiveStorage::Blob
   def text?(); end
 
   def upload(io); end
-
-  def validate_associated_records_for_attachments(*args); end
 
   def video?(); end
 end
@@ -5539,29 +5515,11 @@ end
 
 class Company
   include ::PgSearch::Multisearchable
-  def autosave_associated_records_for_developed_games(*args); end
-
-  def autosave_associated_records_for_game_developers(*args); end
-
-  def autosave_associated_records_for_game_publishers(*args); end
-
-  def autosave_associated_records_for_pg_search_document(); end
-
-  def autosave_associated_records_for_published_games(*args); end
-
   def pg_search_multisearchable_options(); end
 
   def pg_search_multisearchable_options=(val); end
 
   def pg_search_multisearchable_options?(); end
-
-  def validate_associated_records_for_developed_games(*args); end
-
-  def validate_associated_records_for_game_developers(*args); end
-
-  def validate_associated_records_for_game_publishers(*args); end
-
-  def validate_associated_records_for_published_games(*args); end
 end
 
 class Company
@@ -6558,21 +6516,11 @@ end
 
 class Engine
   include ::PgSearch::Multisearchable
-  def autosave_associated_records_for_game_engines(*args); end
-
-  def autosave_associated_records_for_games(*args); end
-
-  def autosave_associated_records_for_pg_search_document(); end
-
   def pg_search_multisearchable_options(); end
 
   def pg_search_multisearchable_options=(val); end
 
   def pg_search_multisearchable_options?(); end
-
-  def validate_associated_records_for_game_engines(*args); end
-
-  def validate_associated_records_for_games(*args); end
 end
 
 class Engine
@@ -7033,8 +6981,6 @@ class ExitCalledError
 end
 
 class ExternalAccount
-  def autosave_associated_records_for_user(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
@@ -7495,10 +7441,6 @@ class Faraday::Utils::Headers
 end
 
 class FavoriteGame
-  def autosave_associated_records_for_game(*args); end
-
-  def autosave_associated_records_for_user(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
@@ -7981,40 +7923,6 @@ end
 
 class Game
   include ::PgSearch::Multisearchable
-  def autosave_associated_records_for_cover_attachment(); end
-
-  def autosave_associated_records_for_cover_blob(); end
-
-  def autosave_associated_records_for_developers(*args); end
-
-  def autosave_associated_records_for_engines(*args); end
-
-  def autosave_associated_records_for_favorites(*args); end
-
-  def autosave_associated_records_for_game_developers(*args); end
-
-  def autosave_associated_records_for_game_engines(*args); end
-
-  def autosave_associated_records_for_game_genres(*args); end
-
-  def autosave_associated_records_for_game_platforms(*args); end
-
-  def autosave_associated_records_for_game_publishers(*args); end
-
-  def autosave_associated_records_for_game_purchases(*args); end
-
-  def autosave_associated_records_for_genres(*args); end
-
-  def autosave_associated_records_for_pg_search_document(); end
-
-  def autosave_associated_records_for_platforms(*args); end
-
-  def autosave_associated_records_for_publishers(*args); end
-
-  def autosave_associated_records_for_purchasers(*args); end
-
-  def autosave_associated_records_for_series(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 
   def cover(); end
@@ -8026,32 +7934,6 @@ class Game
   def pg_search_multisearchable_options=(val); end
 
   def pg_search_multisearchable_options?(); end
-
-  def validate_associated_records_for_developers(*args); end
-
-  def validate_associated_records_for_engines(*args); end
-
-  def validate_associated_records_for_favorites(*args); end
-
-  def validate_associated_records_for_game_developers(*args); end
-
-  def validate_associated_records_for_game_engines(*args); end
-
-  def validate_associated_records_for_game_genres(*args); end
-
-  def validate_associated_records_for_game_platforms(*args); end
-
-  def validate_associated_records_for_game_publishers(*args); end
-
-  def validate_associated_records_for_game_purchases(*args); end
-
-  def validate_associated_records_for_genres(*args); end
-
-  def validate_associated_records_for_platforms(*args); end
-
-  def validate_associated_records_for_publishers(*args); end
-
-  def validate_associated_records_for_purchasers(*args); end
 end
 
 module Game::GeneratedAssociationMethods
@@ -8397,59 +8279,27 @@ class Game
 end
 
 class GameDeveloper
-  def autosave_associated_records_for_company(*args); end
-
-  def autosave_associated_records_for_game(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
 class GameEngine
-  def autosave_associated_records_for_engine(*args); end
-
-  def autosave_associated_records_for_game(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
 class GameGenre
-  def autosave_associated_records_for_game(*args); end
-
-  def autosave_associated_records_for_genre(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
 class GamePlatform
-  def autosave_associated_records_for_game(*args); end
-
-  def autosave_associated_records_for_platform(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
 class GamePublisher
-  def autosave_associated_records_for_company(*args); end
-
-  def autosave_associated_records_for_game(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
 class GamePurchase
-  def autosave_associated_records_for_game(*args); end
-
-  def autosave_associated_records_for_game_purchase_platforms(*args); end
-
-  def autosave_associated_records_for_platforms(*args); end
-
-  def autosave_associated_records_for_user(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
-
-  def validate_associated_records_for_game_purchase_platforms(*args); end
-
-  def validate_associated_records_for_platforms(*args); end
 end
 
 class GamePurchase
@@ -8503,10 +8353,6 @@ class GamePurchase
 end
 
 class GamePurchasePlatform
-  def autosave_associated_records_for_game_purchase(*args); end
-
-  def autosave_associated_records_for_platform(*args); end
-
   def belongs_to_counter_cache_after_update(reflection); end
 end
 
@@ -12431,21 +12277,11 @@ end
 
 class Genre
   include ::PgSearch::Multisearchable
-  def autosave_associated_records_for_game_genres(*args); end
-
-  def autosave_associated_records_for_games(*args); end
-
-  def autosave_associated_records_for_pg_search_document(); end
-
   def pg_search_multisearchable_options(); end
 
   def pg_search_multisearchable_options=(val); end
 
   def pg_search_multisearchable_options?(); end
-
-  def validate_associated_records_for_game_genres(*args); end
-
-  def validate_associated_records_for_games(*args); end
 end
 
 class Genre
@@ -18602,29 +18438,11 @@ end
 
 class Platform
   include ::PgSearch::Multisearchable
-  def autosave_associated_records_for_game_platforms(*args); end
-
-  def autosave_associated_records_for_game_purchase_platforms(*args); end
-
-  def autosave_associated_records_for_game_purchases(*args); end
-
-  def autosave_associated_records_for_games(*args); end
-
-  def autosave_associated_records_for_pg_search_document(); end
-
   def pg_search_multisearchable_options(); end
 
   def pg_search_multisearchable_options=(val); end
 
   def pg_search_multisearchable_options?(); end
-
-  def validate_associated_records_for_game_platforms(*args); end
-
-  def validate_associated_records_for_game_purchase_platforms(*args); end
-
-  def validate_associated_records_for_game_purchases(*args); end
-
-  def validate_associated_records_for_games(*args); end
 end
 
 class Platform
@@ -29879,17 +29697,11 @@ end
 
 class Series
   include ::PgSearch::Multisearchable
-  def autosave_associated_records_for_games(*args); end
-
-  def autosave_associated_records_for_pg_search_document(); end
-
   def pg_search_multisearchable_options(); end
 
   def pg_search_multisearchable_options=(val); end
 
   def pg_search_multisearchable_options?(); end
-
-  def validate_associated_records_for_games(*args); end
 end
 
 class Series
@@ -32061,18 +31873,6 @@ class User
   include ::Devise::Models::Trackable
   include ::FriendlyId::Slugged
   include ::FriendlyId::Finders
-  def autosave_associated_records_for_avatar_attachment(); end
-
-  def autosave_associated_records_for_avatar_blob(); end
-
-  def autosave_associated_records_for_external_account(); end
-
-  def autosave_associated_records_for_favorite_games(*args); end
-
-  def autosave_associated_records_for_game_purchases(*args); end
-
-  def autosave_associated_records_for_games(*args); end
-
   def avatar(); end
 
   def avatar=(attachable); end
@@ -32088,12 +31888,6 @@ class User
   def password_confirmation(); end
 
   def password_confirmation=(password_confirmation); end
-
-  def validate_associated_records_for_favorite_games(*args); end
-
-  def validate_associated_records_for_game_purchases(*args); end
-
-  def validate_associated_records_for_games(*args); end
 end
 
 module User::GeneratedAssociationMethods

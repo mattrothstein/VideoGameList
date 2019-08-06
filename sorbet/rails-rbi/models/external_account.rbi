@@ -112,6 +112,12 @@ class ExternalAccount < ApplicationRecord
 
   sig { returns(ExternalAccount::ActiveRecord_Relation) }
   def self.steam; end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_user(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_user(*args); end
 end
 
 module ExternalAccount::ModelRelationShared

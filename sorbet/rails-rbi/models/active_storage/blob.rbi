@@ -203,6 +203,12 @@ class ActiveStorage::Blob < ActiveRecord::Base
   extend ActiveStorage::Blob::ModelRelationShared
   Elem = type_template(fixed: ActiveStorage::Blob)
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_preview_image_attachment(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_preview_image_attachment(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_preview_image_blob; end
 
@@ -239,6 +245,12 @@ class ActiveStorage::Blob < ActiveRecord::Base
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_preview_image_blob=(val); end
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_preview_image_blob(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_preview_image_blob(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_attachments; end
 
@@ -274,6 +286,12 @@ class ActiveStorage::Blob < ActiveRecord::Base
 
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_attachments=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_attachments(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_attachments(*args); end
 end
 
 module ActiveStorage::Blob::GeneratedAssociationMethods

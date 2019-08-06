@@ -216,6 +216,12 @@ class Company < ApplicationRecord
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_game_developers=(val); end
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game_developers(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game_developers(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_developed_games; end
 
@@ -251,6 +257,12 @@ class Company < ApplicationRecord
 
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_developed_games=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_developed_games(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_developed_games(*args); end
 
   sig { returns(T.untyped) }
   def after_add_for_game_publishers; end
@@ -288,6 +300,12 @@ class Company < ApplicationRecord
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_game_publishers=(val); end
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game_publishers(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game_publishers(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_published_games; end
 
@@ -323,6 +341,54 @@ class Company < ApplicationRecord
 
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_published_games=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_published_games(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_published_games(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_pg_search_document; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_pg_search_document?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_pg_search_document=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_pg_search_document; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_pg_search_document?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_pg_search_document=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_pg_search_document; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_pg_search_document?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_pg_search_document=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_pg_search_document; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_pg_search_document?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_pg_search_document=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_pg_search_document(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_pg_search_document(*args); end
 end
 
 module Company::GeneratedAssociationMethods
@@ -393,4 +459,10 @@ module Company::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_pg_search_document; end
+
+  sig { returns(T.untyped) }
+  def pg_search_document_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def pg_search_document_ids=(ids); end
 end

@@ -293,6 +293,12 @@ class User < ApplicationRecord
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_game_purchases=(val); end
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_game_purchases(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_game_purchases(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_games; end
 
@@ -328,6 +334,12 @@ class User < ApplicationRecord
 
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_games=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_games(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_games(*args); end
 
   sig { returns(T.untyped) }
   def after_add_for_favorite_games; end
@@ -365,6 +377,96 @@ class User < ApplicationRecord
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_favorite_games=(val); end
 
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_favorite_games(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_favorite_games(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_external_account; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_external_account?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_external_account=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_external_account; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_external_account?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_external_account=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_external_account; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_external_account?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_external_account=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_external_account; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_external_account?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_external_account=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_external_account(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_external_account(*args); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_avatar_attachment; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_avatar_attachment?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_avatar_attachment=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_avatar_attachment; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_avatar_attachment?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_avatar_attachment=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_avatar_attachment; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_avatar_attachment?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_avatar_attachment=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_avatar_attachment; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_avatar_attachment?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_avatar_attachment=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_avatar_attachment(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_avatar_attachment(*args); end
+
   sig { returns(T.untyped) }
   def after_add_for_avatar_blob; end
 
@@ -400,6 +502,12 @@ class User < ApplicationRecord
 
   sig { params(val: T.untyped).returns(T.untyped) }
   def before_remove_for_avatar_blob=(val); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def autosave_associated_records_for_avatar_blob(*args); end
+
+  sig { params(args: T.untyped).returns(T.untyped) }
+  def validate_associated_records_for_avatar_blob(*args); end
 end
 
 module User::ModelRelationShared
@@ -575,6 +683,12 @@ module User::GeneratedAssociationMethods
   sig { returns(T.untyped) }
   def reload_external_account; end
 
+  sig { returns(T.untyped) }
+  def external_account_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def external_account_ids=(ids); end
+
   sig { params(args: T.untyped, block: T.untyped).returns(T.untyped) }
   def build_avatar_attachment(*args, &block); end
 
@@ -586,6 +700,12 @@ module User::GeneratedAssociationMethods
 
   sig { returns(T.untyped) }
   def reload_avatar_attachment; end
+
+  sig { returns(T.untyped) }
+  def avatar_attachment_ids; end
+
+  sig { params(ids: T.untyped).returns(T.untyped) }
+  def avatar_attachment_ids=(ids); end
 
   sig { returns(T.untyped) }
   def avatar_blob_ids; end

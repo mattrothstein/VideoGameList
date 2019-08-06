@@ -165,10 +165,47 @@ end
 class Series < ApplicationRecord
   include Series::GeneratedAttributeMethods
   include Series::GeneratedAssociationMethods
+  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Series::ModelRelationShared
   Elem = type_template(fixed: Series)
+
+  sig { returns(T.untyped) }
+  def after_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_games=(val); end
 end
 
 module Series::GeneratedAssociationMethods

@@ -174,10 +174,83 @@ end
 class Genre < ApplicationRecord
   include Genre::GeneratedAttributeMethods
   include Genre::GeneratedAssociationMethods
+  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Genre::ModelRelationShared
   Elem = type_template(fixed: Genre)
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_games=(val); end
 end
 
 module Genre::GeneratedAssociationMethods

@@ -234,10 +234,515 @@ end
 class Game < ApplicationRecord
   include Game::GeneratedAttributeMethods
   include Game::GeneratedAssociationMethods
+  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Game::ModelRelationShared
   Elem = type_template(fixed: Game)
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_purchasers; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_purchasers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_purchasers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_purchasers; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_purchasers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_purchasers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_purchasers; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_purchasers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_purchasers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_purchasers; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_purchasers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_purchasers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_developers; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_developers; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_developers; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_developers; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_developers; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_developers; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_developers; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_developers; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_developers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_developers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_publishers; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_publishers; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_publishers; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_publishers; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_publishers; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_publishers; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_publishers; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_publishers; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_publishers?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_publishers=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_genres; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_genres; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_genres; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_genres; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_genres; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_genres?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_genres=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_engines; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_engines; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_engines; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_engines; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_favorites; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_favorites?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_favorites=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_favorites; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_favorites?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_favorites=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_favorites; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_favorites?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_favorites=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_favorites; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_favorites?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_favorites=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_cover_blob; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_cover_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_cover_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_cover_blob; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_cover_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_cover_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_cover_blob; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_cover_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_cover_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_cover_blob; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_cover_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_cover_blob=(val); end
 end
 
 module Game::GeneratedAssociationMethods

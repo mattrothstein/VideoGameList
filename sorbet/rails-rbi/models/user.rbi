@@ -256,6 +256,150 @@ class User < ApplicationRecord
 
   sig { returns(User::ActiveRecord_Relation) }
   def self.admin; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_favorite_games; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_favorite_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_favorite_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_favorite_games; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_favorite_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_favorite_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_favorite_games; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_favorite_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_favorite_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_favorite_games; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_favorite_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_favorite_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_avatar_blob; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_avatar_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_avatar_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_avatar_blob; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_avatar_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_avatar_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_avatar_blob; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_avatar_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_avatar_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_avatar_blob; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_avatar_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_avatar_blob=(val); end
 end
 
 module User::ModelRelationShared

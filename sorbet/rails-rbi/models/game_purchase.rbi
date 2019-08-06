@@ -202,6 +202,78 @@ class GamePurchase < ApplicationRecord
 
   sig { returns(GamePurchase::ActiveRecord_Relation) }
   def self.paused; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_platforms=(val); end
 end
 
 module GamePurchase::ModelRelationShared

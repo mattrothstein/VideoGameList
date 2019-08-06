@@ -202,6 +202,78 @@ class ActiveStorage::Blob < ActiveRecord::Base
   extend T::Generic
   extend ActiveStorage::Blob::ModelRelationShared
   Elem = type_template(fixed: ActiveStorage::Blob)
+
+  sig { returns(T.untyped) }
+  def after_add_for_preview_image_blob; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_preview_image_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_preview_image_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_preview_image_blob; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_preview_image_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_preview_image_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_preview_image_blob; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_preview_image_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_preview_image_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_preview_image_blob; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_preview_image_blob?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_preview_image_blob=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_attachments; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_attachments?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_attachments=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_attachments; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_attachments?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_attachments=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_attachments; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_attachments?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_attachments=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_attachments; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_attachments?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_attachments=(val); end
 end
 
 module ActiveStorage::Blob::GeneratedAssociationMethods

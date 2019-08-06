@@ -174,10 +174,155 @@ end
 class Platform < ApplicationRecord
   include Platform::GeneratedAttributeMethods
   include Platform::GeneratedAssociationMethods
+  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Platform::ModelRelationShared
   Elem = type_template(fixed: Platform)
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchase_platforms; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchase_platforms?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_purchase_platforms=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_purchases=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchases; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_purchases?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_purchases=(val); end
 end
 
 module Platform::GeneratedAssociationMethods

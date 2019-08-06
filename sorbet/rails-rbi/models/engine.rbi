@@ -165,10 +165,83 @@ end
 class Engine < ApplicationRecord
   include Engine::GeneratedAttributeMethods
   include Engine::GeneratedAssociationMethods
+  extend PgSearch::Model::ClassMethods
   extend T::Sig
   extend T::Generic
   extend Engine::ModelRelationShared
   Elem = type_template(fixed: Engine)
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_engines; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_game_engines?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_game_engines=(val); end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def after_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def after_remove_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_add_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_add_for_games=(val); end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games; end
+
+  sig { returns(T.untyped) }
+  def before_remove_for_games?; end
+
+  sig { params(val: T.untyped).returns(T.untyped) }
+  def before_remove_for_games=(val); end
 end
 
 module Engine::GeneratedAssociationMethods

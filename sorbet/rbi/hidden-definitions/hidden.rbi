@@ -1153,31 +1153,31 @@ class ActionView::Base
 end
 
 module ActionView::CompiledTemplates
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196658237020(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360236252040(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196658943980(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360236424060(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196659469140(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360237033560(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196663862520(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360237475060(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196664308780(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360256623240(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196728239560(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360258244780(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196728284280(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360265448120(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196729766900(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360266871880(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196731369200(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360267677620(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196740331860(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360267721020(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196740886100(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360268364680(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196745571800(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360276996740(local_assigns, output_buffer); end
 
-  def _app_views_devise_mailer_confirmation_instructions_html_erb___4377692172739944041_70196746047300(local_assigns, output_buffer); end
+  def _app_views_devise_mailer_confirmation_instructions_html_erb__21363066775174858_70360277730820(local_assigns, output_buffer); end
 end
 
 class ActionView::DependencyTracker::ERBTracker
@@ -2674,18 +2674,6 @@ class ActiveStorage::Blob
   include ::ActiveStorage::Blob::Analyzable
   include ::ActiveStorage::Blob::Identifiable
   include ::ActiveStorage::Blob::Representable
-  def after_add_for_attachments(); end
-
-  def after_add_for_attachments=(val); end
-
-  def after_add_for_attachments?(); end
-
-  def after_remove_for_attachments(); end
-
-  def after_remove_for_attachments=(val); end
-
-  def after_remove_for_attachments?(); end
-
   def audio?(); end
 
   def autosave_associated_records_for_attachments(*args); end
@@ -2693,18 +2681,6 @@ class ActiveStorage::Blob
   def autosave_associated_records_for_preview_image_attachment(); end
 
   def autosave_associated_records_for_preview_image_blob(); end
-
-  def before_add_for_attachments(); end
-
-  def before_add_for_attachments=(val); end
-
-  def before_add_for_attachments?(); end
-
-  def before_remove_for_attachments(); end
-
-  def before_remove_for_attachments=(val); end
-
-  def before_remove_for_attachments?(); end
 
   def download(&block); end
 
@@ -5563,54 +5539,6 @@ end
 
 class Company
   include ::PgSearch::Multisearchable
-  def after_add_for_developed_games(); end
-
-  def after_add_for_developed_games=(val); end
-
-  def after_add_for_developed_games?(); end
-
-  def after_add_for_game_developers(); end
-
-  def after_add_for_game_developers=(val); end
-
-  def after_add_for_game_developers?(); end
-
-  def after_add_for_game_publishers(); end
-
-  def after_add_for_game_publishers=(val); end
-
-  def after_add_for_game_publishers?(); end
-
-  def after_add_for_published_games(); end
-
-  def after_add_for_published_games=(val); end
-
-  def after_add_for_published_games?(); end
-
-  def after_remove_for_developed_games(); end
-
-  def after_remove_for_developed_games=(val); end
-
-  def after_remove_for_developed_games?(); end
-
-  def after_remove_for_game_developers(); end
-
-  def after_remove_for_game_developers=(val); end
-
-  def after_remove_for_game_developers?(); end
-
-  def after_remove_for_game_publishers(); end
-
-  def after_remove_for_game_publishers=(val); end
-
-  def after_remove_for_game_publishers?(); end
-
-  def after_remove_for_published_games(); end
-
-  def after_remove_for_published_games=(val); end
-
-  def after_remove_for_published_games?(); end
-
   def autosave_associated_records_for_developed_games(*args); end
 
   def autosave_associated_records_for_game_developers(*args); end
@@ -5620,54 +5548,6 @@ class Company
   def autosave_associated_records_for_pg_search_document(); end
 
   def autosave_associated_records_for_published_games(*args); end
-
-  def before_add_for_developed_games(); end
-
-  def before_add_for_developed_games=(val); end
-
-  def before_add_for_developed_games?(); end
-
-  def before_add_for_game_developers(); end
-
-  def before_add_for_game_developers=(val); end
-
-  def before_add_for_game_developers?(); end
-
-  def before_add_for_game_publishers(); end
-
-  def before_add_for_game_publishers=(val); end
-
-  def before_add_for_game_publishers?(); end
-
-  def before_add_for_published_games(); end
-
-  def before_add_for_published_games=(val); end
-
-  def before_add_for_published_games?(); end
-
-  def before_remove_for_developed_games(); end
-
-  def before_remove_for_developed_games=(val); end
-
-  def before_remove_for_developed_games?(); end
-
-  def before_remove_for_game_developers(); end
-
-  def before_remove_for_game_developers=(val); end
-
-  def before_remove_for_game_developers?(); end
-
-  def before_remove_for_game_publishers(); end
-
-  def before_remove_for_game_publishers=(val); end
-
-  def before_remove_for_game_publishers?(); end
-
-  def before_remove_for_published_games(); end
-
-  def before_remove_for_published_games=(val); end
-
-  def before_remove_for_published_games?(); end
 
   def pg_search_multisearchable_options(); end
 
@@ -6678,59 +6558,11 @@ end
 
 class Engine
   include ::PgSearch::Multisearchable
-  def after_add_for_game_engines(); end
-
-  def after_add_for_game_engines=(val); end
-
-  def after_add_for_game_engines?(); end
-
-  def after_add_for_games(); end
-
-  def after_add_for_games=(val); end
-
-  def after_add_for_games?(); end
-
-  def after_remove_for_game_engines(); end
-
-  def after_remove_for_game_engines=(val); end
-
-  def after_remove_for_game_engines?(); end
-
-  def after_remove_for_games(); end
-
-  def after_remove_for_games=(val); end
-
-  def after_remove_for_games?(); end
-
   def autosave_associated_records_for_game_engines(*args); end
 
   def autosave_associated_records_for_games(*args); end
 
   def autosave_associated_records_for_pg_search_document(); end
-
-  def before_add_for_game_engines(); end
-
-  def before_add_for_game_engines=(val); end
-
-  def before_add_for_game_engines?(); end
-
-  def before_add_for_games(); end
-
-  def before_add_for_games=(val); end
-
-  def before_add_for_games?(); end
-
-  def before_remove_for_game_engines(); end
-
-  def before_remove_for_game_engines=(val); end
-
-  def before_remove_for_game_engines?(); end
-
-  def before_remove_for_games(); end
-
-  def before_remove_for_games=(val); end
-
-  def before_remove_for_games?(); end
 
   def pg_search_multisearchable_options(); end
 
@@ -8149,162 +7981,6 @@ end
 
 class Game
   include ::PgSearch::Multisearchable
-  def after_add_for_developers(); end
-
-  def after_add_for_developers=(val); end
-
-  def after_add_for_developers?(); end
-
-  def after_add_for_engines(); end
-
-  def after_add_for_engines=(val); end
-
-  def after_add_for_engines?(); end
-
-  def after_add_for_favorites(); end
-
-  def after_add_for_favorites=(val); end
-
-  def after_add_for_favorites?(); end
-
-  def after_add_for_game_developers(); end
-
-  def after_add_for_game_developers=(val); end
-
-  def after_add_for_game_developers?(); end
-
-  def after_add_for_game_engines(); end
-
-  def after_add_for_game_engines=(val); end
-
-  def after_add_for_game_engines?(); end
-
-  def after_add_for_game_genres(); end
-
-  def after_add_for_game_genres=(val); end
-
-  def after_add_for_game_genres?(); end
-
-  def after_add_for_game_platforms(); end
-
-  def after_add_for_game_platforms=(val); end
-
-  def after_add_for_game_platforms?(); end
-
-  def after_add_for_game_publishers(); end
-
-  def after_add_for_game_publishers=(val); end
-
-  def after_add_for_game_publishers?(); end
-
-  def after_add_for_game_purchases(); end
-
-  def after_add_for_game_purchases=(val); end
-
-  def after_add_for_game_purchases?(); end
-
-  def after_add_for_genres(); end
-
-  def after_add_for_genres=(val); end
-
-  def after_add_for_genres?(); end
-
-  def after_add_for_platforms(); end
-
-  def after_add_for_platforms=(val); end
-
-  def after_add_for_platforms?(); end
-
-  def after_add_for_publishers(); end
-
-  def after_add_for_publishers=(val); end
-
-  def after_add_for_publishers?(); end
-
-  def after_add_for_purchasers(); end
-
-  def after_add_for_purchasers=(val); end
-
-  def after_add_for_purchasers?(); end
-
-  def after_remove_for_developers(); end
-
-  def after_remove_for_developers=(val); end
-
-  def after_remove_for_developers?(); end
-
-  def after_remove_for_engines(); end
-
-  def after_remove_for_engines=(val); end
-
-  def after_remove_for_engines?(); end
-
-  def after_remove_for_favorites(); end
-
-  def after_remove_for_favorites=(val); end
-
-  def after_remove_for_favorites?(); end
-
-  def after_remove_for_game_developers(); end
-
-  def after_remove_for_game_developers=(val); end
-
-  def after_remove_for_game_developers?(); end
-
-  def after_remove_for_game_engines(); end
-
-  def after_remove_for_game_engines=(val); end
-
-  def after_remove_for_game_engines?(); end
-
-  def after_remove_for_game_genres(); end
-
-  def after_remove_for_game_genres=(val); end
-
-  def after_remove_for_game_genres?(); end
-
-  def after_remove_for_game_platforms(); end
-
-  def after_remove_for_game_platforms=(val); end
-
-  def after_remove_for_game_platforms?(); end
-
-  def after_remove_for_game_publishers(); end
-
-  def after_remove_for_game_publishers=(val); end
-
-  def after_remove_for_game_publishers?(); end
-
-  def after_remove_for_game_purchases(); end
-
-  def after_remove_for_game_purchases=(val); end
-
-  def after_remove_for_game_purchases?(); end
-
-  def after_remove_for_genres(); end
-
-  def after_remove_for_genres=(val); end
-
-  def after_remove_for_genres?(); end
-
-  def after_remove_for_platforms(); end
-
-  def after_remove_for_platforms=(val); end
-
-  def after_remove_for_platforms?(); end
-
-  def after_remove_for_publishers(); end
-
-  def after_remove_for_publishers=(val); end
-
-  def after_remove_for_publishers?(); end
-
-  def after_remove_for_purchasers(); end
-
-  def after_remove_for_purchasers=(val); end
-
-  def after_remove_for_purchasers?(); end
-
   def autosave_associated_records_for_cover_attachment(); end
 
   def autosave_associated_records_for_cover_blob(); end
@@ -8338,162 +8014,6 @@ class Game
   def autosave_associated_records_for_purchasers(*args); end
 
   def autosave_associated_records_for_series(*args); end
-
-  def before_add_for_developers(); end
-
-  def before_add_for_developers=(val); end
-
-  def before_add_for_developers?(); end
-
-  def before_add_for_engines(); end
-
-  def before_add_for_engines=(val); end
-
-  def before_add_for_engines?(); end
-
-  def before_add_for_favorites(); end
-
-  def before_add_for_favorites=(val); end
-
-  def before_add_for_favorites?(); end
-
-  def before_add_for_game_developers(); end
-
-  def before_add_for_game_developers=(val); end
-
-  def before_add_for_game_developers?(); end
-
-  def before_add_for_game_engines(); end
-
-  def before_add_for_game_engines=(val); end
-
-  def before_add_for_game_engines?(); end
-
-  def before_add_for_game_genres(); end
-
-  def before_add_for_game_genres=(val); end
-
-  def before_add_for_game_genres?(); end
-
-  def before_add_for_game_platforms(); end
-
-  def before_add_for_game_platforms=(val); end
-
-  def before_add_for_game_platforms?(); end
-
-  def before_add_for_game_publishers(); end
-
-  def before_add_for_game_publishers=(val); end
-
-  def before_add_for_game_publishers?(); end
-
-  def before_add_for_game_purchases(); end
-
-  def before_add_for_game_purchases=(val); end
-
-  def before_add_for_game_purchases?(); end
-
-  def before_add_for_genres(); end
-
-  def before_add_for_genres=(val); end
-
-  def before_add_for_genres?(); end
-
-  def before_add_for_platforms(); end
-
-  def before_add_for_platforms=(val); end
-
-  def before_add_for_platforms?(); end
-
-  def before_add_for_publishers(); end
-
-  def before_add_for_publishers=(val); end
-
-  def before_add_for_publishers?(); end
-
-  def before_add_for_purchasers(); end
-
-  def before_add_for_purchasers=(val); end
-
-  def before_add_for_purchasers?(); end
-
-  def before_remove_for_developers(); end
-
-  def before_remove_for_developers=(val); end
-
-  def before_remove_for_developers?(); end
-
-  def before_remove_for_engines(); end
-
-  def before_remove_for_engines=(val); end
-
-  def before_remove_for_engines?(); end
-
-  def before_remove_for_favorites(); end
-
-  def before_remove_for_favorites=(val); end
-
-  def before_remove_for_favorites?(); end
-
-  def before_remove_for_game_developers(); end
-
-  def before_remove_for_game_developers=(val); end
-
-  def before_remove_for_game_developers?(); end
-
-  def before_remove_for_game_engines(); end
-
-  def before_remove_for_game_engines=(val); end
-
-  def before_remove_for_game_engines?(); end
-
-  def before_remove_for_game_genres(); end
-
-  def before_remove_for_game_genres=(val); end
-
-  def before_remove_for_game_genres?(); end
-
-  def before_remove_for_game_platforms(); end
-
-  def before_remove_for_game_platforms=(val); end
-
-  def before_remove_for_game_platforms?(); end
-
-  def before_remove_for_game_publishers(); end
-
-  def before_remove_for_game_publishers=(val); end
-
-  def before_remove_for_game_publishers?(); end
-
-  def before_remove_for_game_purchases(); end
-
-  def before_remove_for_game_purchases=(val); end
-
-  def before_remove_for_game_purchases?(); end
-
-  def before_remove_for_genres(); end
-
-  def before_remove_for_genres=(val); end
-
-  def before_remove_for_genres?(); end
-
-  def before_remove_for_platforms(); end
-
-  def before_remove_for_platforms=(val); end
-
-  def before_remove_for_platforms?(); end
-
-  def before_remove_for_publishers(); end
-
-  def before_remove_for_publishers=(val); end
-
-  def before_remove_for_publishers?(); end
-
-  def before_remove_for_purchasers(); end
-
-  def before_remove_for_purchasers=(val); end
-
-  def before_remove_for_purchasers?(); end
 
   def belongs_to_counter_cache_after_update(reflection); end
 
@@ -8917,30 +8437,6 @@ class GamePublisher
 end
 
 class GamePurchase
-  def after_add_for_game_purchase_platforms(); end
-
-  def after_add_for_game_purchase_platforms=(val); end
-
-  def after_add_for_game_purchase_platforms?(); end
-
-  def after_add_for_platforms(); end
-
-  def after_add_for_platforms=(val); end
-
-  def after_add_for_platforms?(); end
-
-  def after_remove_for_game_purchase_platforms(); end
-
-  def after_remove_for_game_purchase_platforms=(val); end
-
-  def after_remove_for_game_purchase_platforms?(); end
-
-  def after_remove_for_platforms(); end
-
-  def after_remove_for_platforms=(val); end
-
-  def after_remove_for_platforms?(); end
-
   def autosave_associated_records_for_game(*args); end
 
   def autosave_associated_records_for_game_purchase_platforms(*args); end
@@ -8948,30 +8444,6 @@ class GamePurchase
   def autosave_associated_records_for_platforms(*args); end
 
   def autosave_associated_records_for_user(*args); end
-
-  def before_add_for_game_purchase_platforms(); end
-
-  def before_add_for_game_purchase_platforms=(val); end
-
-  def before_add_for_game_purchase_platforms?(); end
-
-  def before_add_for_platforms(); end
-
-  def before_add_for_platforms=(val); end
-
-  def before_add_for_platforms?(); end
-
-  def before_remove_for_game_purchase_platforms(); end
-
-  def before_remove_for_game_purchase_platforms=(val); end
-
-  def before_remove_for_game_purchase_platforms?(); end
-
-  def before_remove_for_platforms(); end
-
-  def before_remove_for_platforms=(val); end
-
-  def before_remove_for_platforms?(); end
 
   def belongs_to_counter_cache_after_update(reflection); end
 
@@ -12959,59 +12431,11 @@ end
 
 class Genre
   include ::PgSearch::Multisearchable
-  def after_add_for_game_genres(); end
-
-  def after_add_for_game_genres=(val); end
-
-  def after_add_for_game_genres?(); end
-
-  def after_add_for_games(); end
-
-  def after_add_for_games=(val); end
-
-  def after_add_for_games?(); end
-
-  def after_remove_for_game_genres(); end
-
-  def after_remove_for_game_genres=(val); end
-
-  def after_remove_for_game_genres?(); end
-
-  def after_remove_for_games(); end
-
-  def after_remove_for_games=(val); end
-
-  def after_remove_for_games?(); end
-
   def autosave_associated_records_for_game_genres(*args); end
 
   def autosave_associated_records_for_games(*args); end
 
   def autosave_associated_records_for_pg_search_document(); end
-
-  def before_add_for_game_genres(); end
-
-  def before_add_for_game_genres=(val); end
-
-  def before_add_for_game_genres?(); end
-
-  def before_add_for_games(); end
-
-  def before_add_for_games=(val); end
-
-  def before_add_for_games?(); end
-
-  def before_remove_for_game_genres(); end
-
-  def before_remove_for_game_genres=(val); end
-
-  def before_remove_for_game_genres?(); end
-
-  def before_remove_for_games(); end
-
-  def before_remove_for_games=(val); end
-
-  def before_remove_for_games?(); end
 
   def pg_search_multisearchable_options(); end
 
@@ -19178,54 +18602,6 @@ end
 
 class Platform
   include ::PgSearch::Multisearchable
-  def after_add_for_game_platforms(); end
-
-  def after_add_for_game_platforms=(val); end
-
-  def after_add_for_game_platforms?(); end
-
-  def after_add_for_game_purchase_platforms(); end
-
-  def after_add_for_game_purchase_platforms=(val); end
-
-  def after_add_for_game_purchase_platforms?(); end
-
-  def after_add_for_game_purchases(); end
-
-  def after_add_for_game_purchases=(val); end
-
-  def after_add_for_game_purchases?(); end
-
-  def after_add_for_games(); end
-
-  def after_add_for_games=(val); end
-
-  def after_add_for_games?(); end
-
-  def after_remove_for_game_platforms(); end
-
-  def after_remove_for_game_platforms=(val); end
-
-  def after_remove_for_game_platforms?(); end
-
-  def after_remove_for_game_purchase_platforms(); end
-
-  def after_remove_for_game_purchase_platforms=(val); end
-
-  def after_remove_for_game_purchase_platforms?(); end
-
-  def after_remove_for_game_purchases(); end
-
-  def after_remove_for_game_purchases=(val); end
-
-  def after_remove_for_game_purchases?(); end
-
-  def after_remove_for_games(); end
-
-  def after_remove_for_games=(val); end
-
-  def after_remove_for_games?(); end
-
   def autosave_associated_records_for_game_platforms(*args); end
 
   def autosave_associated_records_for_game_purchase_platforms(*args); end
@@ -19235,54 +18611,6 @@ class Platform
   def autosave_associated_records_for_games(*args); end
 
   def autosave_associated_records_for_pg_search_document(); end
-
-  def before_add_for_game_platforms(); end
-
-  def before_add_for_game_platforms=(val); end
-
-  def before_add_for_game_platforms?(); end
-
-  def before_add_for_game_purchase_platforms(); end
-
-  def before_add_for_game_purchase_platforms=(val); end
-
-  def before_add_for_game_purchase_platforms?(); end
-
-  def before_add_for_game_purchases(); end
-
-  def before_add_for_game_purchases=(val); end
-
-  def before_add_for_game_purchases?(); end
-
-  def before_add_for_games(); end
-
-  def before_add_for_games=(val); end
-
-  def before_add_for_games?(); end
-
-  def before_remove_for_game_platforms(); end
-
-  def before_remove_for_game_platforms=(val); end
-
-  def before_remove_for_game_platforms?(); end
-
-  def before_remove_for_game_purchase_platforms(); end
-
-  def before_remove_for_game_purchase_platforms=(val); end
-
-  def before_remove_for_game_purchase_platforms?(); end
-
-  def before_remove_for_game_purchases(); end
-
-  def before_remove_for_game_purchases=(val); end
-
-  def before_remove_for_game_purchases?(); end
-
-  def before_remove_for_games(); end
-
-  def before_remove_for_games=(val); end
-
-  def before_remove_for_games?(); end
 
   def pg_search_multisearchable_options(); end
 
@@ -30551,33 +29879,9 @@ end
 
 class Series
   include ::PgSearch::Multisearchable
-  def after_add_for_games(); end
-
-  def after_add_for_games=(val); end
-
-  def after_add_for_games?(); end
-
-  def after_remove_for_games(); end
-
-  def after_remove_for_games=(val); end
-
-  def after_remove_for_games?(); end
-
   def autosave_associated_records_for_games(*args); end
 
   def autosave_associated_records_for_pg_search_document(); end
-
-  def before_add_for_games(); end
-
-  def before_add_for_games=(val); end
-
-  def before_add_for_games?(); end
-
-  def before_remove_for_games(); end
-
-  def before_remove_for_games=(val); end
-
-  def before_remove_for_games?(); end
 
   def pg_search_multisearchable_options(); end
 
@@ -32757,42 +32061,6 @@ class User
   include ::Devise::Models::Trackable
   include ::FriendlyId::Slugged
   include ::FriendlyId::Finders
-  def after_add_for_favorite_games(); end
-
-  def after_add_for_favorite_games=(val); end
-
-  def after_add_for_favorite_games?(); end
-
-  def after_add_for_game_purchases(); end
-
-  def after_add_for_game_purchases=(val); end
-
-  def after_add_for_game_purchases?(); end
-
-  def after_add_for_games(); end
-
-  def after_add_for_games=(val); end
-
-  def after_add_for_games?(); end
-
-  def after_remove_for_favorite_games(); end
-
-  def after_remove_for_favorite_games=(val); end
-
-  def after_remove_for_favorite_games?(); end
-
-  def after_remove_for_game_purchases(); end
-
-  def after_remove_for_game_purchases=(val); end
-
-  def after_remove_for_game_purchases?(); end
-
-  def after_remove_for_games(); end
-
-  def after_remove_for_games=(val); end
-
-  def after_remove_for_games?(); end
-
   def autosave_associated_records_for_avatar_attachment(); end
 
   def autosave_associated_records_for_avatar_blob(); end
@@ -32808,42 +32076,6 @@ class User
   def avatar(); end
 
   def avatar=(attachable); end
-
-  def before_add_for_favorite_games(); end
-
-  def before_add_for_favorite_games=(val); end
-
-  def before_add_for_favorite_games?(); end
-
-  def before_add_for_game_purchases(); end
-
-  def before_add_for_game_purchases=(val); end
-
-  def before_add_for_game_purchases?(); end
-
-  def before_add_for_games(); end
-
-  def before_add_for_games=(val); end
-
-  def before_add_for_games?(); end
-
-  def before_remove_for_favorite_games(); end
-
-  def before_remove_for_favorite_games=(val); end
-
-  def before_remove_for_favorite_games?(); end
-
-  def before_remove_for_game_purchases(); end
-
-  def before_remove_for_game_purchases=(val); end
-
-  def before_remove_for_game_purchases?(); end
-
-  def before_remove_for_games(); end
-
-  def before_remove_for_games=(val); end
-
-  def before_remove_for_games?(); end
 
   def current_password(); end
 

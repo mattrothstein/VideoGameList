@@ -64,11 +64,47 @@ class CursedRbiPlugin < SorbetRails::ModelPlugins::Base
         assoc_module_rbi.create_method(
           "#{assoc_name.to_s.singularize}_ids=",
           parameters: [
-            Parlour::RbiGenerator::Parameter.new("ids", type: 'T.untyped'),
+            Parlour::RbiGenerator::Parameter.new("ids", type: 'T.untyped')
           ],
           return_type: 'T.untyped'
         )
+
+        model_klass = root.create_class(model_class_name)
+        create_after_before_add_remove_methods(assoc_name, model_klass)
       end
+    end
+  end
+
+  # Create "(after/before)_(add/remove)_for_#{assoc_name}" methods
+  def create_after_before_add_remove_methods(assoc_name, model_klass)
+    prefixes = [
+      'after_add_for_',
+      'after_remove_for_',
+      'before_add_for_',
+      'before_remove_for_'
+    ]
+
+    # This should also create separate class and instance methods, but
+    # currently Parlour doesn't like when you do that.
+    prefixes.each do |prefix|
+      # def after_add_for_author(); end
+      model_klass.create_method(
+        "#{prefix}#{assoc_name}",
+        return_type: 'T.untyped'
+      )
+      # def after_add_for_author?(); end
+      model_klass.create_method(
+        "#{prefix}#{assoc_name}?",
+        return_type: 'T.untyped'
+      )
+      # def after_add_for_author=(val); end
+      model_klass.create_method(
+        "#{prefix}#{assoc_name}=",
+        parameters: [
+          Parlour::RbiGenerator::Parameter.new('val', type: 'T.untyped')
+        ],
+        return_type: 'T.untyped'
+      )
     end
   end
 end

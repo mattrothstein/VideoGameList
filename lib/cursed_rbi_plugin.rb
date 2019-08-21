@@ -2,7 +2,7 @@
 class CursedRbiPlugin < SorbetRails::ModelPlugins::Base
   # Add some cursed methods to the Rails generators.
   def generate(root)
-    return unless @model_class.reflections.length > 0
+    return unless @model_class.reflections.length.positive?
 
     assoc_module_name = model_module_name("GeneratedAssociationMethods")
     assoc_module_rbi = root.create_module(assoc_module_name)
@@ -130,7 +130,7 @@ class CursedRbiPlugin < SorbetRails::ModelPlugins::Base
       ],
       return_type: 'T.untyped'
     )
-    
+
     # def validate_associated_records_for_developers(*args); end
     model_klass.create_method(
       "validate_associated_records_for_#{assoc_name}",

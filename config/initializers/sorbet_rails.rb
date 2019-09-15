@@ -1,4 +1,7 @@
 # typed: strict
+require Rails.root.join('lib', 'cursed_rbi_plugin')
+
+SorbetRails::ModelRbiFormatter.register_plugin(CursedRbiPlugin)
 
 SorbetRails.configure do |config|
   config.enabled_gem_plugins = [
